@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <unistd.h>
+void ft_putchar(char c);
+void ft_print_alphabet(void);
+void ft_print_reverse_alphabet(void);
+void ft_is_negative(int n);
+void ft_print_comb(void);
+void ft_print_numbers(void);
+
+void ft_print_comb(void)
+{
+    int a= 0;
+    int b=0;
+    int c;
+	printf("%d",a );
+
+   while(a<=7)
+ { 
+	 b=a+1;
+        while(b<=8)
+          {
+		c=b+1;	 
+while (c<=9)
+         {
+         printf(" %d%d%d\n",a,b,c);
+         c++ ;
+
+         }
+     b++ }
+a++;
+    }
+
+
+
+
+}
+
+
+
+void ft_is_negative(int n){
+if ( n>= 0 )
+{
+write (1,"P",1);
+}
+else
+{ write (1,"N",1);
+}
+
+
+}
+
+
+
+void ft_print_numbers(void){
+ int chif ;
+for(chif= 0 ; chif <= 9 ; chif++)
+{ft_putchar(chif + '0' ) ;
+}
+}
+
+void ft_print_reverse_alphabet(void)
+{ char alph;
+
+
+for(alph ='z';alph >= 'a' ; alph--)
+    {
+write(1,&alph,1);
+
+    }
+  printf("\n");
+}
+
+void ft_putchar(char c) {
+
+           write(1,&c,1);
+       }
+
+void ft_print_alphabet(void) {
+char alph='a';
+//char fin ='z'
+    while (alph<='z')
+    {
+         write(1,&alph,1);
+         alph++;
+    }
+
+
+}
+
+int main(){
+
+char s ;
+s='d';
+int testnum = 5;
+
+
+ ft_print_comb();
+ft_is_negative(testnum);
+ft_print_numbers();
+ ft_print_reverse_alphabet();
+ft_print_alphabet();
+ft_putchar(s);
+printf("\ni hope its work yaa boy\n");
+
+
+
+}
